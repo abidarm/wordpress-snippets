@@ -1,0 +1,1 @@
+wp i18n make-pot . languages/my-plugin.pot --skip-js --exclude="directory/subdir,myfile.php"

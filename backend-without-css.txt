@@ -1,0 +1,7 @@
+Http overs HTTPS
+Plugins
+
+add to wp-config.php :
+
+define( 'CONCATENATE_SCRIPTS', false ); 
+define( 'SCRIPT_DEBUG', true );

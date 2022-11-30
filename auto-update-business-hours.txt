@@ -1,0 +1,13 @@
+Add to functions.php
+
+// Disable nightly builds and development updates
+add_filter( 'allow_dev_auto_core_updates', '__return_false' );
+
+
+
+Add to wp-config.php :
+
+define( 'WP_AUTO_UPDATE_CORE', true );
+$current_time = date( 'Hi' );
+$disable_updater = ( $current_time > 600 || $current_time < 2359 );
+define( 'AUTOMATIC_UPDATER_DISABLED', $disable_updater );

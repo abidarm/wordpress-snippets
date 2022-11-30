@@ -1,0 +1,27 @@
+add_filter( 'pre_get_document_title', 'tlx_modify_title_tag', 999, 1 );
+
+function tlx_modify_title_tag( $title ) {
+
+    if( get_query_var( 'pagename' ) == 'latest-news' ) {
+        $title = "الأحدث - ". get_bloginfo('site_name');
+    }
+
+    return $title;
+}
+
+
+
+================================================================
+Doesnt work with seo plugins (yoast / mathrank)
+===
+
+add_filter( 'document_title_parts', 'tlx_modify_title_tag' );
+
+function tlx_modify_title_tag( $title_parts ) {
+
+    if( get_query_var( 'pagename' ) == 'latest-news' ) {
+        $title_parts['title'] = 'الأحدث';
+    }
+
+    return $title_parts;
+}

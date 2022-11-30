@@ -1,0 +1,28 @@
+Updraftplus + exclude thumbnails
+Wordfence
+SSL (htaccess + fixer) don't use Realy simple
+WPS Hide Login
+
+Disable file editing in wp-config:
+define( 'DISALLOW_FILE_EDIT', true );
+
+Disable plugin and theme install/upgrade :
+define( 'DISALLOW_FILE_MODS', true );
+
+Require SSL for Admin and Logins :
+define( 'FORCE_SSL_ADMIN', true );
+
+Post revisions : (0 for disable)
+define( 'WP_POST_REVISIONS', 3 );
+
+Disable PHP File Execution in Certain WordPress Directories
+(/wp-content/uploads/.htaccess)
+<Files *.php>
+deny from all
+</Files>
+
+Disable Directory Indexing and Browsing
+
+.htaccess :
+Options -Indexes
+
